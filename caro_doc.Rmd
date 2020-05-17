@@ -1,0 +1,151 @@
+---
+title: "caro"
+author: "Cristhian Diaz"
+date: "16/5/2020"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Tabla 19
+
+Llamamos la base.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+setwd("~/MaThesis/Cari/Tesis-Maestría-Caro/Documentos tesis Caro/Bases de datos/Población total")
+
+library("dplyr")
+library("haven")
+base=read_sav(file = "Base Pirámide Poblacional.sav")
+
+base2=read_sav(file = "Base pre-post-mayo-2020.sav")
+
+```
+
+Creamos la función a usar.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+source("https://www.dropbox.com/s/ak6azmzdxvgkgpl/funtis.R?dl=1")
+```
+
+Para la pregunta 27, checamos
+
+```{r}
+imprime=tabla(columna = 36)
+imprime
+inter=tabla(columna = 114)
+inter
+final=tabla(columna = 191)
+final
+```
+
+Pregunta 28.1
+```{r}
+imprime=tabla(columna = 37)
+imprime
+inter=tabla(columna = 115)
+inter
+final=tabla(columna = 192)
+final
+```
+
+Pregunta 28.2
+```{r}
+imprime=tabla(columna = 38)
+imprime
+inter=tabla(columna = 116)
+inter
+final=tabla(columna = 193)
+final
+```
+
+Pregunta 28.3
+```{r}
+imprime=tabla(columna = 39)
+imprime
+inter=tabla(columna = 117)
+inter
+final=tabla(columna = 194)
+final
+```
+
+Pregunta 28.3
+```{r}
+imprime=tabla(columna = 42,no = 777,titulo_nose ="Solo_Caracteristicas" ,nose = 4)
+imprime
+        #post-inter
+inter=tabla(columna = 120,no = 777,titulo_nose ="Solo_Caracteristicas" ,nose = 4)
+inter
+        #post final
+final=tabla(columna = 197,no = 777,titulo_nose ="Solo_Caracteristicas" ,nose = 4)
+final
+
+```
+
+Pregunta 30
+```{r}
+imprime=tabla(columna = 47,titulo_nose = "")
+imprime
+inter=tabla(columna = 125)
+inter
+final=tabla(columna = 202)
+final
+```
+
+Pregunta 37
+```{r}
+imprime=tabla(columna = 74)
+imprime
+inter=tabla(columna = 152) #78
+inter
+final=tabla(columna = 230) #78
+final
+```
+
+Pregunta 36
+```{r}
+imprime=tabla(columna = 67)
+imprime
+inter=tabla(columna = 145) #78
+inter
+final=tabla(columna = 223)
+final
+```
+
+Pregunta 36.1 Metodo
+```{r}
+imprime=tabla(columna = 68)
+imprime
+inter=tabla(columna = 146)
+inter
+final=tabla(columna = 224)
+final
+```
+
+Pregunta 36.2
+```{r}
+imprime=tabla(columna = 69)
+imprime
+inter=tabla(columna = 147)
+inter
+final=tabla(columna = 225)
+final
+```
+
+Pregunta 37
+```{r}
+imprime=tabla(columna = 70)
+imprime
+inter=tabla(columna = 148)
+inter
+final=tabla(columna = 226)
+final
+```
+
+
+
+
+
+
