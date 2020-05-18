@@ -14,13 +14,17 @@ knitr::opts_chunk$set(echo = TRUE)
 Llamamos la base.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
-setwd("~/MaThesis/Cari/Tesis-Maestría-Caro/Documentos tesis Caro/Bases de datos/Población total")
+setwd("~/GitHub/Tablasdefrecuencia")
+#setwd("~/MaThesis/Cari/Tesis-Maestría-Caro/Documentos tesis Caro/Bases de datos/Población total")
 
 library("dplyr")
 library("haven")
-base=read_sav(file = "Base Pirámide Poblacional.sav")
 
-base2=read_sav(file = "Base pre-post-mayo-2020.sav")
+base=read_sav(file = "C:/Users/veron/Downloads/tesis caro/Base Piramide Poblacional.sav")
+base2=read_sav(file = "C:/Users/veron/Downloads/tesis caro/Base pre-post-mayo-2020.sav")
+
+#base=read_sav(file = "Base Pirámide Poblacional.sav")
+#base2=read_sav(file = "Base pre-post-mayo-2020.sav")
 
 ```
 
