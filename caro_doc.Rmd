@@ -27,8 +27,8 @@ base2=read_sav(file = "C:/Users/veron/Downloads/tesis caro/Base pre-post-mayo-20
 Creamos la función a usar.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
-source("funtis.R")
-#source("https://www.dropbox.com/s/ak6azmzdxvgkgpl/funtis.R?dl=1")
+#source("funtis.R")
+source("https://www.dropbox.com/s/ak6azmzdxvgkgpl/funtis.R?dl=1")
 ```
 
 Para la pregunta 27, checamos
@@ -289,7 +289,152 @@ subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 ```
 
 
-holi
+## Tabla 20
+
+Pregunta 43
+```{r}
+imprime=tabla(columna = 83)
+imprime
+inter=tabla(columna = 161)
+inter
+final=tabla(columna = 239)
+final
+```
+
+Pregunta 43.1
+```{r}
+imprime=tabla(columna = 84, titulo_si = "Pican y molestan", no=2, titulo_no = "Pueden producir enfermedades",
+              nose = 3, titulo_nose = "La picadura causa alergia", otros = c(4,888), 
+              titulos_otros = c("Las ronchas se pueden infectar","No responde"))
+imprime
+inter=tabla(columna = 162, titulo_si = "Pican y molestan", no=2, titulo_no = "Pueden producir enfermedades",
+              nose = 3, titulo_nose = "La picadura causa alergia", otros = c(4,888), 
+              titulos_otros = c("Las ronchas se pueden infectar","No responde"))
+inter
+final=tabla(columna = 240, titulo_si = "Pican y molestan", no=2, titulo_no = "Pueden producir enfermedades",
+              nose = 3, titulo_nose = "La picadura causa alergia", otros = c(4,888), 
+              titulos_otros = c("Las ronchas se pueden infectar","No responde"))
+final
+```
+
+Pregunta 43.2
+```{r}
+#no se pregunto en el pre
+
+inter=tabla(columna = 163)
+inter
+final=tabla(columna = 241)
+final
+```
+
+Pregunta 43.3
+```{r}
+inter=tabla(columna = 164, si=5, titulo_si = "Pican a las personas", no=6, titulo_no="Alborotan a los otros mosquitos")
+inter
+final=tabla(columna = 242, si=4, titulo_si = "Pican a las personas", no=1, titulo_no="Alborotan a los otros mosquitos")
+final
+```
+
+Pregunta 43.4
+```{r}
+inter=tabla(columna = 164, titulo_si = "No pican", nose=3, titulo_nose="No transmiten enfermedades", no=2, titulo_no = "Son buenos porque ayudaran a", otros = 888, titulos_otros = "No responde") 
+inter
+final=tabla(columna = 243, titulo_si = "No pican", nose=3, titulo_nose="No transmiten enfermedades", no=2, titulo_no = "Son buenos porque ayudaran a", otros = 888, titulos_otros = "No responde") 
+final
+```
+
+Pregunta 38
+```{r}
+imprime=tabla(columna = 75)
+imprime
+inter=tabla(columna = 153)
+inter
+final=tabla(columna = 231) 
+final
+```
+
+Pregunta 38.1 (se utiliza la variable 38.1.1 para la contabilizacion)
+```{r}
+imprime=tabla(columna = 77, titulo_si = "Incompleta", no=2, titulo_no = "Medio completa")
+imprime
+inter=tabla(columna = 155, titulo_si = "Incompleta", no=2, titulo_no = "Medio completa",
+            nose=3, titulo_nose = "Completa")
+inter
+final=tabla(columna = 233, titulo_si = "Incompleta", no=2, titulo_no = "Medio completa",
+            nose=3, titulo_nose = "Completa") 
+final
+```
+
+Pregunta 40
+```{r}
+imprime=tabla(columna = 79, titulo_si = "El mosquito que liberan no pica a las perso",
+              no=2, titulo_no = "El mosquito que liberan no se alimenta de s",
+              otros=3, titulos_otros = "El mosquito que liberan no tiene descendenc")
+imprime
+inter=tabla(columna = 157, titulo_si = "El mosquito que liberan no pica a las perso",
+              no=2, titulo_no = "El mosquito que liberan no se alimenta de s",
+              otros=3, titulos_otros = "El mosquito que liberan no tiene descendenc")
+inter
+final=tabla(columna = 235, titulo_si = "El mosquito que liberan no pica a las perso",
+              no=2, titulo_no = "El mosquito que liberan no se alimenta de s",
+              otros=3, titulos_otros = "El mosquito que liberan no tiene descendenc")
+final
+```
+
+Pregunta 41
+```{r}
+imprime=tabla(columna = 81, titulo_si = "Evitar transmisión de dengue",
+              no=2, titulo_no = "Evitar la reproducción de mosquitos",
+              otros=c(3,4,5), 
+              titulos_otros = c("Para que haya menos mosquitos con el",
+                                "Evitar que eclosionen los huevecillos",
+                                "Otro: Para que se coma o mate al mosq"))
+imprime
+inter=tabla(columna = 159, titulo_si = "Evitar transmisión de dengue",
+              no=2, titulo_no = "Evitar la reproducción de mosquitos",
+              otros=c(3,4,5), 
+              titulos_otros = c("Para que haya menos mosquitos con el",
+                                "Evitar que eclosionen los huevecillos",
+                                "Otro: Para que se coma o mate al mosq"))
+inter
+final=tabla(columna = 237, titulo_si = "Evitar transmisión de dengue",
+              no=2, titulo_no = "Evitar la reproducción de mosquitos",
+              otros=c(3,4,5), 
+              titulos_otros = c("Para que haya menos mosquitos con el",
+                                "Evitar que eclosionen los huevecillos",
+                                "Otro: Para que se coma o mate al mosq"))
+final
+```
+
+Pregunta 47
+```{r}
+imprime=tabla(columna = 92)
+imprime
+inter=tabla(columna = 172)
+inter
+final=tabla(columna = 251) 
+final
+```
+
+## Tabla 22
+Pregunta 45
+```{r}
+imprime=tabla(columna = 86)
+imprime
+inter=tabla(columna = 166)
+inter
+final=tabla(columna = 245)
+final
+```
 
 
+Pregunta 43.1
+```{r}
+imprime=tabla(columna = 84)
+imprime
+#inter=tabla(columna = 171,si=4,no=2)
+#inter
+#final=tabla(columna = 250,si=4,no=2)
+#final
+```
 
