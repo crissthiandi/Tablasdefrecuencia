@@ -76,7 +76,7 @@ final=tabla(columna = 194)
 final
 ```
 
-Pregunta 28.3
+Pregunta 29
 ```{r}
 imprime=tabla(columna = 42,no = 777,titulo_nose ="Solo_Caracteristicas" ,nose = 4)
 imprime
@@ -295,7 +295,6 @@ subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 ```
 
 
-holi
 
 
 
