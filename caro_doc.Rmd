@@ -510,7 +510,7 @@ inter
 final=tabla(columna = 204,nose = NULL)
 final
 tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
-tabla20=rbind(tabla19,tabla19sub)
+tabla20=rbind(tabla20,tabla20sub)
 ```
 
 pregunta 33
@@ -522,7 +522,7 @@ inter
 final=tabla(columna = 214,si=2, no=c(3,4,1))
 final
 tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
-tabla20=rbind(tabla19,tabla19sub)
+tabla20=rbind(tabla20,tabla20sub)
 ```
 
 pregunta 34
@@ -534,7 +534,7 @@ inter
 final=tabla(columna = 215,si=1,titulo_si = "Han aumentado", no=2, titulo_no = "Han disminuido",nose=3,titulo_nose = "Esta igual", otros = c(4,777),titulos_otros = c("Han aumentado pero no pican","No sabe"))
 final
 tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
-tabla20=rbind(tabla19,tabla19sub)
+tabla20=rbind(tabla20,tabla20sub)
 ```
 
 
