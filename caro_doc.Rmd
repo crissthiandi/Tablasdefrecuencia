@@ -416,6 +416,7 @@ final=tabla(columna = 251)
 final
 ```
 
+
 ## Tabla 22
 Pregunta 45
 ```{r}
@@ -428,13 +429,166 @@ final
 ```
 
 
-Pregunta 43.1
+Pregunta 51
 ```{r}
-imprime=tabla(columna = 84)
+imprime=tabla(columna = 97)
 imprime
-#inter=tabla(columna = 171,si=4,no=2)
-#inter
-#final=tabla(columna = 250,si=4,no=2)
-#final
+inter=tabla(columna = 177)
+inter
+final=tabla(columna = 256,si=4)
+final
 ```
 
+Pregunta 51.1
+```{r}
+imprime=tabla(columna = 98, titulo_si="Niños y niñas", no=3,
+              titulo_no="bebés", nose=4, titulo_nose = "Todos en la casa",
+              otros=2, titulos_otros = "Adulto mayores")
+imprime
+inter=tabla(columna = 178, titulo_si="Niños y niñas", no=3,
+              titulo_no="bebés", nose=4, titulo_nose = "Todos en la casa",
+            otros=2, titulos_otros = "Adulto mayores")
+inter
+final=tabla(columna = 257, titulo_si="Niños y niñas", no=3,
+              titulo_no="bebés", nose=4, titulo_nose = "Todos en la casa",
+            otros=2, titulos_otros = "Adulto mayores")
+final
+```
+
+Pregunta 50
+```{r}
+imprime=tabla(columna = 95, nose=NULL)
+imprime
+inter=tabla(columna = 175, nose=NULL)
+inter
+final=tabla(columna = 254, nose=NULL)
+final
+```
+
+Pregunta 50.1
+```{r}
+imprime=tabla(columna = 96, titulo_si="De uno a tres dias", no=2,
+              titulo_no="de tres a cinco dias", nose=3,
+              titulo_nose="De cinco a siete dias")
+imprime
+inter=tabla(columna = 176, titulo_si="De uno a tres dias", no=2,
+              titulo_no="de tres a cinco dias", nose=3,
+              titulo_nose="De cinco a siete dias")
+inter
+final=tabla(columna = 255, titulo_si="De uno a tres dias", no=2,
+              titulo_no="de tres a cinco dias", nose=3,
+              titulo_nose="De cinco a siete dias")
+final
+```
+
+Pregunta 52
+```{r}
+imprime=tabla(columna = 99, nose=NULL)
+imprime
+inter=tabla(columna = 179, nose=NULL)
+inter
+final=tabla(columna = 258, nose=NULL)
+final
+```
+
+Pregunta 53
+```{r}
+imprime=tabla(columna = 101, nose=NULL)
+imprime
+inter=tabla(columna = 181, nose=NULL)
+inter
+final=tabla(columna = 260, nose=NULL)
+final
+```
+
+Pregunta 53.1
+```{r}
+imprime=tabla(columna = 102, nose=NULL)
+imprime
+inter=tabla(columna = 182, nose=NULL)
+inter
+final=tabla(columna = 261, nose=NULL)
+final
+```
+
+Pregunta 53.2
+```{r}
+imprime=tabla(columna = 103, nose=NULL)
+imprime
+inter=tabla(columna = 183, nose=NULL)
+inter
+final=tabla(columna = 262, nose=NULL)
+final
+```
+
+Pregunta 54
+```{r}
+imprime=tabla(columna = 105, titulo_no = "Ninguna", 
+              titulo_si = "Otro: ventilador, quemar carton",
+              nose=7, titulo_nose = "Otro (raidolitos, raqueta eléctrica, repelente, insectici~", otros= c(2,3,4,5,6),
+              titulos_otros = c("Control de criaderos",
+                        "Control de criaderos con métodos no comerciales",
+                        "Control de criaderos con métodos comerciales",
+                        "Control de criaderos con métodos comerciales y no comerci~",
+                        "Métodos comerciales con métodos no comerciales"))
+imprime
+inter=tabla(columna = 186,  titulo_no = "Ninguna", 
+              titulo_si = "Otro: ventilador, quemar carton",
+              nose=7, titulo_nose = "Otro (raidolitos, raqueta eléctrica, repelente, insectici~", otros= c(2,3,4,5,6),
+              titulos_otros = c("Control de criaderos",
+                        "Control de criaderos con métodos no comerciales",
+                        "Control de criaderos con métodos comerciales",
+                        "Control de criaderos con métodos comerciales y no comerci~",
+                        "Métodos comerciales con métodos no comerciales"))
+inter
+final=tabla(columna = 265, titulo_no = "Ninguna", 
+              titulo_si = "Otro: ventilador, quemar carton",
+              nose=7, titulo_nose = "Otro (raidolitos, raqueta eléctrica, repelente, insectici~", otros= c(2,3,4,5,6),
+              titulos_otros = c("Control de criaderos",
+                        "Control de criaderos con métodos no comerciales",
+                        "Control de criaderos con métodos comerciales",
+                        "Control de criaderos con métodos comerciales y no comerci~",
+                        "Métodos comerciales con métodos no comerciales"))
+final
+```
+
+Pregunta 55
+```{r}
+imprime=tabla(columna = 106, titulo_si = "Ahuyentar a esos y otros mosquitos",
+              no=2, titulo_no = "Usar repelente para evitar la picadura",
+              otros = c(3,5,6),
+              titulos_otros = c("Nada", "Nada, porque no pican",
+                                "Cerrar la casa"))
+imprime
+inter=tabla(columna = 187, titulo_si = "Ahuyentar a esos y otros mosquitos",
+              no=2, titulo_no = "Usar repelente para evitar la picadura",
+              otros = c(3,5,6),
+              titulos_otros = c("Nada", "Nada, porque no pican",
+                                "Cerrar la casa"))
+inter
+final=tabla(columna = 267, titulo_si = "Ahuyentar a esos y otros mosquitos",
+              no=2, titulo_no = "Usar repelente para evitar la picadura",
+              otros = c(3,5,6),
+              titulos_otros = c("Nada", "Nada, porque no pican",
+                                "Cerrar la casa"))
+final
+```
+
+Pregunta 56
+```{r}
+imprime=tabla(columna = 107, titulo_si = "Matar a esos mosquitos",
+              no=2, titulo_no = "Usar repelente para evitar la picadura",
+              otros = c(3,4),
+              titulos_otros = c("Nada", "Ahuyentar a esos y otros mosquitos"))
+imprime
+inter=tabla(columna = 188, titulo_si = "Matar a esos mosquitos",
+              no=2, titulo_no = "Usar repelente para evitar la picadura",
+              otros = c(3,4),
+              titulos_otros = c("Nada", "Ahuyentar a esos y otros mosquitos"))
+inter
+final=tabla(columna = 268, titulo_si = "Matar a esos mosquitos",
+              no=2, titulo_no = "Usar repelente para evitar la picadura",
+              otros = c(3,4),
+              titulos_otros = c("Nada", "Ahuyentar a esos y otros mosquitos"))
+final
+```
