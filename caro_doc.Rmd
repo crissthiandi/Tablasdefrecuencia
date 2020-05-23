@@ -15,7 +15,7 @@ Llamamos la base.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 #setwd("~/GitHub/Tablasdefrecuencia")
-setwd("~/MaThesis/Cari/Tesis-Maestría-Caro/Documentos tesis Caro/Bases de datos/Población total")
+setwd("C:/Users/Acer E15/Documents/MaThesis/Cari/Tesis-Maestría-Caro/Documentos tesis Caro/Bases de datos/Población total")
 
 library("dplyr")
 library("haven")
@@ -44,6 +44,7 @@ inter=tabla(columna = 114)
 inter
 final=tabla(columna = 191)
 final
+tabla19=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 ```
 
 Pregunta 28.1
@@ -54,6 +55,8 @@ inter=tabla(columna = 115)
 inter
 final=tabla(columna = 192)
 final
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 28.2
@@ -64,6 +67,8 @@ inter=tabla(columna = 116)
 inter
 final=tabla(columna = 193)
 final
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 28.3
@@ -74,6 +79,8 @@ inter=tabla(columna = 117)
 inter
 final=tabla(columna = 194)
 final
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 29
@@ -87,6 +94,8 @@ inter
 final=tabla(columna = 197,no = 777,titulo_nose ="Solo_Caracteristicas" ,nose = 4)
 final
 
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 30
@@ -97,6 +106,8 @@ inter=tabla(columna = 125)
 inter
 final=tabla(columna = 202)
 final
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 37
@@ -107,6 +118,8 @@ inter=tabla(columna = 152) #78
 inter
 final=tabla(columna = 230) #78
 final
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 36
@@ -117,7 +130,10 @@ inter=tabla(columna = 145) #78
 inter
 final=tabla(columna = 223)
 final
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
+
 Pregunta 36.4
 ```{r}
 imprime=tabla(columna = 71)
@@ -126,7 +142,8 @@ inter=tabla(columna = 149)
 inter
 final=tabla(columna = 227)
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 36.1 Metodo
@@ -137,6 +154,8 @@ inter=tabla(columna = 146)
 inter
 final=tabla(columna = 224)
 final
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 36.3
@@ -147,8 +166,8 @@ inter=tabla(columna = 148)
 inter
 final=tabla(columna = 226)
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
-
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 36.2
@@ -159,7 +178,8 @@ inter=tabla(columna = 147)
 inter
 final=tabla(columna = 225)
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 36.5
@@ -170,7 +190,8 @@ inter=tabla(columna = 150)
 inter
 final=tabla(columna = 228)
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 35
@@ -181,7 +202,8 @@ inter=tabla(columna = 139)
 inter
 final=tabla(columna = 216)
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 35.1
@@ -192,7 +214,8 @@ inter=tabla(columna = 140)
 inter
 final=tabla(columna = 217)
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 35.2
@@ -203,7 +226,8 @@ inter=tabla(columna = 141)
 inter
 final=tabla(columna = 218)
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 35.3
@@ -214,7 +238,8 @@ inter=tabla(columna = 142)
 inter
 final=tabla(columna = 219)
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 35.3
@@ -225,7 +250,8 @@ inter=tabla(columna = 143)
 inter
 final=tabla(columna = 220)
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 35.3
@@ -236,7 +262,8 @@ inter=tabla(columna = 144)
 inter
 final=tabla(columna = 221)
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 46.1
@@ -247,7 +274,8 @@ inter=tabla(columna = 167,titulo_si = "Positivo",titulo_no = "Negativo")
 inter
 final=tabla(columna = 246,titulo_si = "Positivo",titulo_no = "Negativo")
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 46.2
@@ -258,7 +286,7 @@ inter=tabla(columna = 168,titulo_si = "Positivo",titulo_no = "Negativo")
 inter
 final=tabla(columna = 247,titulo_si = "Positivo",titulo_no = "Negativo")
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9)) tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 46.3
@@ -269,7 +297,7 @@ inter=tabla(columna = 169,titulo_si = "Positivo",titulo_no = "Negativo")
 inter
 final=tabla(columna = 248,titulo_si = "Positivo",titulo_no = "Negativo")
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9)) tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 46.4
@@ -280,7 +308,7 @@ inter=tabla(columna = 170,titulo_si = "Positivo",titulo_no = "Negativo")
 inter
 final=tabla(columna = 249,titulo_si = "Positivo",titulo_no = "Negativo")
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9)) tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 46.5
@@ -291,7 +319,7 @@ inter=tabla(columna = 171,si=4,no=c(1,2,3,999),nose = NULL)
 inter
 final=tabla(columna = 250,si=4,no=c(1,2,3,999),nose = NULL)
 final
-subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9)) tabla19=rbind(tabla19,tabla19sub)
 ```
 
 
@@ -444,6 +472,16 @@ imprime
 ```
 
 ## Tabla 21
+
+Pregunta 47
+```{r}
+imprime=tabla(columna = 92)
+imprime
+inter=tabla(columna = 172)
+inter
+final=tabla(columna = 251)
+final
+```
 
 
 
