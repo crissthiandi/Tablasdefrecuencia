@@ -337,6 +337,7 @@ inter=tabla(columna = 161)
 inter
 final=tabla(columna = 239)
 final
+tabla20=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 ```
 
 Pregunta 43.1
@@ -353,31 +354,53 @@ final=tabla(columna = 240, titulo_si = "Pican y molestan", no=2, titulo_no = "Pu
               nose = 3, titulo_nose = "La picadura causa alergia", otros = c(4,888), 
               titulos_otros = c("Las ronchas se pueden infectar","No responde"))
 final
+tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla20=rbind(tabla20,tabla20sub)
 ```
 
 Pregunta 43.2
 ```{r}
-#no se pregunto en el pre
+estatus<-c("Si","no","No sabe")
+Con_taller<-c(0,0,0)
+Sin_taller<-c(0,0,0)
+imprime=data.frame(estatus,Con_taller,Sin_taller)
+imprime
 inter=tabla(columna = 163)
 inter
 final=tabla(columna = 241)
 final
+tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla20=rbind(tabla20,tabla20sub)
 ```
 
 Pregunta 43.3
 ```{r}
+estatus<-c("Si","no","No sabe")
+Con_taller<-c(0,0,0)
+Sin_taller<-c(0,0,0)
+imprime=data.frame(estatus,Con_taller,Sin_taller)
+imprime
 inter=tabla(columna = 164, si=5, titulo_si = "Pican a las personas", no=6, titulo_no="Alborotan a los otros mosquitos")
 inter
 final=tabla(columna = 242, si=4, titulo_si = "Pican a las personas", no=1, titulo_no="Alborotan a los otros mosquitos")
 final
+tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla20=rbind(tabla20,tabla20sub)
 ```
 
 Pregunta 43.4
 ```{r}
+estatus<-c("Si","no","No sabe")
+Con_taller<-c(0,0,0)
+Sin_taller<-c(0,0,0)
+imprime=data.frame(estatus,Con_taller,Sin_taller)
+imprime
 inter=tabla(columna = 164, titulo_si = "No pican", nose=3, titulo_nose="No transmiten enfermedades", no=2, titulo_no = "Son buenos porque ayudaran a", otros = 888, titulos_otros = "No responde") 
 inter
 final=tabla(columna = 243, titulo_si = "No pican", nose=3, titulo_nose="No transmiten enfermedades", no=2, titulo_no = "Son buenos porque ayudaran a", otros = 888, titulos_otros = "No responde") 
 final
+tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla20=rbind(tabla20,tabla20sub)
 ```
 
 Pregunta 38
@@ -388,6 +411,8 @@ inter=tabla(columna = 153)
 inter
 final=tabla(columna = 231) 
 final
+tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla20=rbind(tabla20,tabla20sub)
 ```
 
 Pregunta 38.1 (se utiliza la variable 38.1.1 para la contabilizacion)
@@ -400,6 +425,8 @@ inter
 final=tabla(columna = 233, titulo_si = "Incompleta", no=2, titulo_no = "Medio completa",
             nose=3, titulo_nose = "Completa") 
 final
+tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla20=rbind(tabla20,tabla20sub)
 ```
 
 Pregunta 40
@@ -416,6 +443,8 @@ final=tabla(columna = 235, titulo_si = "El mosquito que liberan no pica a las pe
               no=2, titulo_no = "El mosquito que liberan no se alimenta de s",
               otros=3, titulos_otros = "El mosquito que liberan no tiene descendenc")
 final
+tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla20=rbind(tabla20,tabla20sub)
 ```
 
 Pregunta 41
@@ -441,6 +470,8 @@ final=tabla(columna = 237, titulo_si = "Evitar transmisión de dengue",
                                 "Evitar que eclosionen los huevecillos",
                                 "Otro: Para que se coma o mate al mosq"))
 final
+tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla20=rbind(tabla20,tabla20sub)
 ```
 
 Pregunta 47
@@ -451,28 +482,8 @@ inter=tabla(columna = 172)
 inter
 final=tabla(columna = 251) 
 final
-```
-
-## Tabla 22
-Pregunta 45
-```{r}
-imprime=tabla(columna = 86)
-imprime
-inter=tabla(columna = 166)
-inter
-final=tabla(columna = 245)
-final
-```
-
-
-Pregunta 43.1
-```{r}
-imprime=tabla(columna = 84)
-imprime
-#inter=tabla(columna = 171,si=4,no=2)
-#inter
-#final=tabla(columna = 250,si=4,no=2)
-#final
+tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla20=rbind(tabla20,tabla20sub)
 ```
 
 ## Tabla 21
@@ -537,6 +548,205 @@ tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla20=rbind(tabla20,tabla20sub)
 ```
 
+## Tabla 22
+
+Pregunta 45
+```{r}
+imprime=tabla(columna = 86)
+imprime
+inter=tabla(columna = 166)
+inter
+final=tabla(columna = 245)
+final
+tabla22=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+```
+
+
+Pregunta 51
+```{r}
+imprime=tabla(columna = 97, nose=NULL)
+imprime
+inter=tabla(columna = 177, nose=NULL)
+inter
+final=tabla(columna = 256, nose=NULL)
+final
+tabla22sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla22=rbind(tabla22,tabla22sub)
+```
+
+Pregunta 51.1
+```{r}
+imprime=tabla(columna = 98, titulo_si="Niños y niñas", no=3,
+              titulo_no="bebés", nose=4, titulo_nose = "Todos en la casa",
+              otros=2, titulos_otros = "Adulto mayores")
+imprime
+inter=tabla(columna = 178, titulo_si="Niños y niñas", no=3,
+              titulo_no="bebés", nose=4, titulo_nose = "Todos en la casa",
+            otros=2, titulos_otros = "Adulto mayores")
+inter
+final=tabla(columna = 257, titulo_si="Niños y niñas", no=3,
+              titulo_no="bebés", nose=4, titulo_nose = "Todos en la casa",
+            otros=2, titulos_otros = "Adulto mayores")
+final
+tabla22sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla22=rbind(tabla22,tabla22sub)
+```
+
+Pregunta 50
+```{r}
+imprime=tabla(columna = 95, nose=NULL)
+imprime
+inter=tabla(columna = 175, nose=NULL)
+inter
+final=tabla(columna = 254, nose=NULL)
+final
+tabla22sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla22=rbind(tabla22,tabla22sub)
+```
+
+Pregunta 50.1
+```{r}
+imprime=tabla(columna = 96, titulo_si="De uno a tres dias", no=2,
+              titulo_no="de tres a cinco dias", nose=3,
+              titulo_nose="De cinco a siete dias")
+imprime
+inter=tabla(columna = 176, titulo_si="De uno a tres dias", no=2,
+              titulo_no="de tres a cinco dias", nose=3,
+              titulo_nose="De cinco a siete dias")
+inter
+final=tabla(columna = 255, titulo_si="De uno a tres dias", no=2,
+              titulo_no="de tres a cinco dias", nose=3,
+              titulo_nose="De cinco a siete dias")
+final
+tabla22sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla22=rbind(tabla22,tabla22sub)
+```
+
+Pregunta 52
+```{r}
+imprime=tabla(columna = 99, nose=NULL)
+imprime
+inter=tabla(columna = 179, nose=NULL)
+inter
+final=tabla(columna = 258, nose=NULL)
+final
+tabla22sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla22=rbind(tabla22,tabla22sub)
+```
+
+Pregunta 53
+```{r}
+imprime=tabla(columna = 101, nose=NULL)
+imprime
+inter=tabla(columna = 181, nose=NULL)
+inter
+final=tabla(columna = 260, nose=NULL)
+final
+tabla22sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla22=rbind(tabla22,tabla22sub)
+```
+
+Pregunta 53.1
+```{r}
+imprime=tabla(columna = 102, nose=NULL)
+imprime
+inter=tabla(columna = 182, nose=NULL)
+inter
+final=tabla(columna = 261, nose=NULL)
+final
+tabla22sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla22=rbind(tabla22,tabla22sub)
+```
+
+Pregunta 53.2
+```{r}
+imprime=tabla(columna = 103, nose=NULL)
+imprime
+inter=tabla(columna = 183, nose=NULL)
+inter
+final=tabla(columna = 262, nose=NULL)
+final
+tabla22sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla22=rbind(tabla22,tabla22sub)
+```
+
+Pregunta 54
+```{r}
+imprime=tabla(columna = 105, titulo_no = "Ninguna", 
+              titulo_si = "Otro: ventilador, quemar carton",
+              nose=7, titulo_nose = "Otro (raidolitos, raqueta eléctrica, repelente, insectici~", otros= c(2,3,4,5,6),
+              titulos_otros = c("Control de criaderos",
+                        "Control de criaderos con métodos no comerciales",
+                        "Control de criaderos con métodos comerciales",
+                        "Control de criaderos con métodos comerciales y no comerci~",
+                        "Métodos comerciales con métodos no comerciales"))
+imprime
+inter=tabla(columna = 186,  titulo_no = "Ninguna", 
+              titulo_si = "Otro: ventilador, quemar carton",
+              nose=7, titulo_nose = "Otro (raidolitos, raqueta eléctrica, repelente, insectici~", otros= c(2,3,4,5,6),
+              titulos_otros = c("Control de criaderos",
+                        "Control de criaderos con métodos no comerciales",
+                        "Control de criaderos con métodos comerciales",
+                        "Control de criaderos con métodos comerciales y no comerci~",
+                        "Métodos comerciales con métodos no comerciales"))
+inter
+final=tabla(columna = 265, titulo_no = "Ninguna", 
+              titulo_si = "Otro: ventilador, quemar carton",
+              nose=7, titulo_nose = "Otro (raidolitos, raqueta eléctrica, repelente, insectici~", otros= c(2,3,4,5,6),
+              titulos_otros = c("Control de criaderos",
+                        "Control de criaderos con métodos no comerciales",
+                        "Control de criaderos con métodos comerciales",
+                        "Control de criaderos con métodos comerciales y no comerci~",
+                        "Métodos comerciales con métodos no comerciales"))
+final
+tabla22sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla22=rbind(tabla22,tabla22sub)
+```
+
+Pregunta 55
+```{r}
+imprime=tabla(columna = 106, titulo_si = "Ahuyentar a esos y otros mosquitos",
+              no=2, titulo_no = "Usar repelente para evitar la picadura",
+              otros = c(3,5,6),
+              titulos_otros = c("Nada", "Nada, porque no pican",
+                                "Cerrar la casa"))
+imprime
+inter=tabla(columna = 187, titulo_si = "Ahuyentar a esos y otros mosquitos",
+              no=2, titulo_no = "Usar repelente para evitar la picadura",
+              otros = c(3,5,6),
+              titulos_otros = c("Nada", "Nada, porque no pican",
+                                "Cerrar la casa"))
+inter
+final=tabla(columna = 267, titulo_si = "Ahuyentar a esos y otros mosquitos",
+              no=2, titulo_no = "Usar repelente para evitar la picadura",
+              otros = c(3,5,6),
+              titulos_otros = c("Nada", "Nada, porque no pican",
+                                "Cerrar la casa"))
+final
+tabla22sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla22=rbind(tabla22,tabla22sub)
+```
+
+Pregunta 56
+```{r}
+imprime=tabla(columna = 107, titulo_si = "Matar a esos mosquitos",
+              no=2, titulo_no = "Usar repelente para evitar la picadura",
+              otros = c(3,4),
+              titulos_otros = c("Nada", "Ahuyentar a esos y otros mosquitos"))
+imprime
+inter=tabla(columna = 188, titulo_si = "Matar a esos mosquitos",
+              no=2, titulo_no = "Usar repelente para evitar la picadura",
+              otros = c(3,4),
+              titulos_otros = c("Nada", "Ahuyentar a esos y otros mosquitos"))
+inter
+final=tabla(columna = 268, titulo_si = "Matar a esos mosquitos",
+              no=2, titulo_no = "Usar repelente para evitar la picadura",
+              otros = c(3,4),
+              titulos_otros = c("Nada", "Ahuyentar a esos y otros mosquitos"))
+final
+tabla22sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla22=rbind(tabla22,tabla22sub)
+```
 
 
 
