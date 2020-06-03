@@ -24,7 +24,8 @@ library("haven")
 # base2=read_sav(file = "C:/Users/veron/Downloads/tesis caro/Base pre-post-mayo-2020.sav")
 
 base=read_sav(file = "Base Pirámide Poblacional.sav")
-base2=read_sav(file = "../../Base pre-post-mayo-2020.sav")
+base2=read_sav(file = "Base pre-post-mayo-2020.sav")
+nuevabase=read_sav("../../Base Factores contribuyentes-Junio-2020.sav")
 
 ```
 
@@ -83,23 +84,47 @@ tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
 ```
 
+Pregunta 28.4
+```{r}
+imprime=tabla(columna = 40,no =c(0,777))
+imprime
+inter=tabla(columna = 118,no =c(0,777))
+inter
+final=tabla(columna = 195,no =c(0,777))
+final
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
+```
 Pregunta 29
 ```{r}
-imprime=tabla(columna = 42,no = 777,titulo_nose ="Solo_Caracteristicas" ,nose = 4)
+imprime=tabla(columna = 42,no = c(4,777))
 imprime
         #post-inter
-inter=tabla(columna = 120,no = 777,titulo_nose ="Solo_Caracteristicas" ,nose = 4)
+inter=tabla(columna = 120,no = c(4,777))
 inter
         #post final
-final=tabla(columna = 197,no = 777,titulo_nose ="Solo_Caracteristicas" ,nose = 4)
+final=tabla(columna = 197,no = c(4,777))
 final
 
 tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
 ```
 
-Pregunta 30
+Pregunta 37
 ```{r}
+imprime=tabla(columna = 74,si=2,no=c(1,3,77))
+imprime
+inter=tabla(columna = 152,si=2,no=c(1,3,77)) #78
+inter
+final=tabla(columna = 230,si=2,no=c(1,3,77)) #78
+final
+tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla19=rbind(tabla19,tabla19sub)
+```
+
+Pregunta 30 
+```{r}
+#esto esta pendiente
 imprime=tabla(columna = 47,titulo_nose = "")
 imprime
 inter=tabla(columna = 125)
@@ -110,20 +135,10 @@ tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
 ```
 
-Pregunta 37
-```{r}
-imprime=tabla(columna = 74)
-imprime
-inter=tabla(columna = 152) #78
-inter
-final=tabla(columna = 230) #78
-final
-tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
-tabla19=rbind(tabla19,tabla19sub)
-```
 
 Pregunta 36
 ```{r}
+#filtro
 imprime=tabla(columna = 67)
 imprime
 inter=tabla(columna = 145) #78
@@ -134,20 +149,9 @@ tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
 ```
 
-Pregunta 36.4
+Pregunta 36.1
 ```{r}
-imprime=tabla(columna = 71)
-imprime
-inter=tabla(columna = 149)
-inter
-final=tabla(columna = 227)
-final
-tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
-tabla19=rbind(tabla19,tabla19sub)
-```
-
-Pregunta 36.1 Metodo
-```{r}
+#insecticida
 imprime=tabla(columna = 68)
 imprime
 inter=tabla(columna = 146)
@@ -160,6 +164,7 @@ tabla19=rbind(tabla19,tabla19sub)
 
 Pregunta 36.3
 ```{r}
+#mayamosquitera
 imprime=tabla(columna = 70)
 imprime
 inter=tabla(columna = 148)
@@ -170,26 +175,38 @@ tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
 ```
 
-Pregunta 36.2
+Pregunta 36.4
 ```{r}
-imprime=tabla(columna = 69)
+#repelente corporal
+imprime=tabla(columna = 71)
 imprime
-inter=tabla(columna = 147)
+inter=tabla(columna = 149)
 inter
-final=tabla(columna = 225)
+final=tabla(columna = 227)
 final
 tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
 ```
 
-Pregunta 36.5
-```{r}
-imprime=tabla(columna = 72)
-imprime
-inter=tabla(columna = 150)
-inter
-final=tabla(columna = 228)
-final
+
+Pregunta 36.5 + 36.2
+```{r warning=FALSE}
+imprime1=tabla(columna = 69)
+inter1=tabla(columna = 147)
+final1=tabla(columna = 225)
+
+imprime2=tabla(columna = 72)
+imprime=imprime2+imprime1
+imprime$estatus=c("Si","No")
+
+inter2=tabla(columna = 150)
+inter=inter2+inter1
+inter$estatus=c("Si","No")
+
+final2=tabla(columna = 228)
+final=final2+final1
+final$estatus=c("Si","No")
+
 tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
 ```
@@ -254,25 +271,25 @@ tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
 ```
 
-Pregunta 35.3
+Pregunta 35.4
 ```{r}
-imprime=tabla(columna = 66)
-imprime
-inter=tabla(columna = 144)
-inter
-final=tabla(columna = 221)
-final
-tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
-tabla19=rbind(tabla19,tabla19sub)
+# imprime=tabla(columna = 66)
+# imprime
+# inter=tabla(columna = 144)
+# inter
+# final=tabla(columna = 221)
+# final
+# tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+# tabla19=rbind(tabla19,tabla19sub)
 ```
 
 Pregunta 46.1
 ```{r}
-imprime=tabla(columna = 87,titulo_si = "Positivo",titulo_no = "Negativo")
+imprime=tabla(columna = 87,titulo_si = "Si(Positivo)",titulo_no = "No(Negativo)")
 imprime
-inter=tabla(columna = 167,titulo_si = "Positivo",titulo_no = "Negativo")
+inter=tabla(columna = 167,titulo_si = "Si(Positivo)",titulo_no = "No(Negativo)")
 inter
-final=tabla(columna = 246,titulo_si = "Positivo",titulo_no = "Negativo")
+final=tabla(columna = 246,titulo_si = "Si(Positivo)",titulo_no = "No(Negativo)")
 final
 tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
@@ -280,11 +297,11 @@ tabla19=rbind(tabla19,tabla19sub)
 
 Pregunta 46.2
 ```{r}
-imprime=tabla(columna = 88,titulo_si = "Positivo",titulo_no = "Negativo")
+imprime=tabla(columna = 88,titulo_si = "Si(Positivo)",titulo_no = "No(Negativo)")
 imprime
-inter=tabla(columna = 168,titulo_si = "Positivo",titulo_no = "Negativo")
+inter=tabla(columna = 168,titulo_si = "Si(Positivo)",titulo_no = "No(Negativo)")
 inter
-final=tabla(columna = 247,titulo_si = "Positivo",titulo_no = "Negativo")
+final=tabla(columna = 247,titulo_si = "Si(Positivo)",titulo_no = "No(Negativo)")
 final
 tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
@@ -292,11 +309,11 @@ tabla19=rbind(tabla19,tabla19sub)
 
 Pregunta 46.3
 ```{r}
-imprime=tabla(columna = 89,titulo_si = "Positivo",titulo_no = "Negativo")
+imprime=tabla(columna = 89,titulo_si = "Si(Positivo)",titulo_no = "No(Negativo)")
 imprime
-inter=tabla(columna = 169,titulo_si = "Positivo",titulo_no = "Negativo")
+inter=tabla(columna = 169,titulo_si = "Si(Positivo)",titulo_no = "No(Negativo)")
 inter
-final=tabla(columna = 248,titulo_si = "Positivo",titulo_no = "Negativo")
+final=tabla(columna = 248,titulo_si = "Si(Positivo)",titulo_no = "No(Negativo)")
 final
 tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
@@ -304,23 +321,11 @@ tabla19=rbind(tabla19,tabla19sub)
 
 Pregunta 46.4
 ```{r}
-imprime=tabla(columna = 90,titulo_si = "Positivo",titulo_no = "Negativo")
+imprime=tabla(columna = 90,titulo_si = "Si(Positivo)",titulo_no = "No(Negativo)")
 imprime
-inter=tabla(columna = 170,titulo_si = "Positivo",titulo_no = "Negativo")
+inter=tabla(columna = 170,titulo_si = "Si(Positivo)",titulo_no = "No(Negativo)")
 inter
-final=tabla(columna = 249,titulo_si = "Positivo",titulo_no = "Negativo")
-final
-tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
-tabla19=rbind(tabla19,tabla19sub)
-```
-
-Pregunta 46.5
-```{r}
-imprime=tabla(columna = 91,si=4,no=c(1,2,3,999),nose = NULL)
-imprime
-inter=tabla(columna = 171,si=4,no=c(1,2,3,999),nose = NULL)
-inter
-final=tabla(columna = 250,si=4,no=c(1,2,3,999),nose = NULL)
+final=tabla(columna = 249,titulo_si = "Si(Positivo)",titulo_no = "No(Negativo)")
 final
 tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
@@ -490,26 +495,26 @@ tabla20=rbind(tabla20,tabla20sub)
 
 Pregunta 47
 ```{r}
-imprime=tabla(columna = 93)
+imprime=tabla(columna = 93,no = c(0,777))
 imprime
-inter=tabla(columna = 173)
+inter=tabla(columna = 173,no = c(0,777))
 inter
-final=tabla(columna = 252)
+final=tabla(columna = 252,no = c(0,777))
 final
-tabla20=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla21=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 ```
 
 
 pregunta 48
 ```{r}
-imprime=tabla(columna = 94)
+imprime=tabla(columna = 94,no = c(0,777))
 imprime
-inter=tabla(columna = 174)
+inter=tabla(columna = 174,no = c(0,777))
 inter
-final=tabla(columna = 253)
+final=tabla(columna = 253,no = c(0,777))
 final
-tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
-tabla20=rbind(tabla19,tabla19sub)
+tabla21sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla21=rbind(tabla21,tabla21sub)
 ```
 
 pregunta 31.1
@@ -520,32 +525,33 @@ inter=tabla(columna = 127,nose = NULL)
 inter
 final=tabla(columna = 204,nose = NULL)
 final
-tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
-tabla20=rbind(tabla20,tabla20sub)
+tabla21sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla21=rbind(tabla21,tabla21sub)
 ```
 
 pregunta 33
 ```{r}
-imprime=tabla(columna = 59,si=2, no=c(3,4,1))
+imprime=tabla(columna = 59,si=2, no=c(3,4,1,777))
 imprime
-inter=tabla(columna = 137,si=2, no=c(3,4,1))
+inter=tabla(columna = 137,si=2, no=c(3,4,1,777))
 inter
-final=tabla(columna = 214,si=2, no=c(3,4,1))
+final=tabla(columna = 214,si=2, no=c(3,4,1,777))
 final
-tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
-tabla20=rbind(tabla20,tabla20sub)
+tabla21sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla21=rbind(tabla21,tabla21sub)
 ```
 
 pregunta 34
 ```{r}
-imprime=tabla(columna = 60,si=1,titulo_si = "Han aumentado", no=2, titulo_no = "Han disminuido",nose=3,titulo_nose = "Esta igual", otros = c(4,777),titulos_otros = c("Han aumentado pero no pican","No sabe"))
+#checar si no responde es no, segun yo no
+imprime=tabla(columna = 60,si=2,no=c(1,3,4,777))
 imprime
-inter=tabla(columna = 138,si=1,titulo_si = "Han aumentado", no=2, titulo_no = "Han disminuido",nose=3,titulo_nose = "Esta igual", otros = c(4,777),titulos_otros = c("Han aumentado pero no pican","No sabe"))
+inter=tabla(columna = 138,si=2,no=c(1,3,4,777))
 inter
-final=tabla(columna = 215,si=1,titulo_si = "Han aumentado", no=2, titulo_no = "Han disminuido",nose=3,titulo_nose = "Esta igual", otros = c(4,777),titulos_otros = c("Han aumentado pero no pican","No sabe"))
+final=tabla(columna = 215,si=2,no=c(1,3,4,777))
 final
-tabla20sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
-tabla20=rbind(tabla20,tabla20sub)
+tabla21sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
+tabla21=rbind(tabla21,tabla21sub)
 ```
 
 ## Tabla 22
