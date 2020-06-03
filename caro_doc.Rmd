@@ -15,7 +15,7 @@ Llamamos la base.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 #setwd("~/GitHub/Tablasdefrecuencia")
-setwd("C:/Users/Acer E15/Documents/MaThesis/Cari/Tesis-Maestría-Caro/Documentos tesis Caro/Bases de datos/Población total")
+setwd("C:/Users/Acer E15/Documents/MaThesis/Cari/Tesis-Maestría-Caro/Documentos tesis Caro/Bases de datos/Población total/")
 
 library("dplyr")
 library("haven")
@@ -24,7 +24,7 @@ library("haven")
 # base2=read_sav(file = "C:/Users/veron/Downloads/tesis caro/Base pre-post-mayo-2020.sav")
 
 base=read_sav(file = "Base Pirámide Poblacional.sav")
-base2=read_sav(file = "Base pre-post-mayo-2020.sav")
+base2=read_sav(file = "../../Base pre-post-mayo-2020.sav")
 
 ```
 
@@ -38,22 +38,22 @@ source(file = "../../funtis.R")
 Para la pregunta 27, checamos
 
 ```{r}
-imprime=tabla(columna = 36)
+imprime=tabla(columna = 36,no =c(0,777))
 imprime
-inter=tabla(columna = 114)
+inter=tabla(columna = 114,no =c(0,777))
 inter
-final=tabla(columna = 191)
+final=tabla(columna = 191,no =c(0,777))
 final
 tabla19=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 ```
 
 Pregunta 28.1
 ```{r}
-imprime=tabla(columna = 37)
+imprime=tabla(columna = 37,no =c(0,777))
 imprime
-inter=tabla(columna = 115)
+inter=tabla(columna = 115,no =c(0,777))
 inter
-final=tabla(columna = 192)
+final=tabla(columna = 192,no =c(0,777))
 final
 tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
@@ -61,11 +61,11 @@ tabla19=rbind(tabla19,tabla19sub)
 
 Pregunta 28.2
 ```{r}
-imprime=tabla(columna = 38)
+imprime=tabla(columna = 38,no =c(0,777))
 imprime
-inter=tabla(columna = 116)
+inter=tabla(columna = 116,no =c(0,777))
 inter
-final=tabla(columna = 193)
+final=tabla(columna = 193,no =c(0,777))
 final
 tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
@@ -73,11 +73,11 @@ tabla19=rbind(tabla19,tabla19sub)
 
 Pregunta 28.3
 ```{r}
-imprime=tabla(columna = 39)
+imprime=tabla(columna = 39,no =c(0,777))
 imprime
-inter=tabla(columna = 117)
+inter=tabla(columna = 117,no =c(0,777))
 inter
-final=tabla(columna = 194)
+final=tabla(columna = 194,no =c(0,777))
 final
 tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
