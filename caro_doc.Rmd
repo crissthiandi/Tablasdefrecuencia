@@ -191,21 +191,30 @@ tabla19=rbind(tabla19,tabla19sub)
 
 Pregunta 36.5 + 36.2
 ```{r warning=FALSE}
-imprime1=tabla(columna = 69)
-inter1=tabla(columna = 147)
-final1=tabla(columna = 225)
+nueva=base2 %>% select(69,72,Asistio_Talleres_Iniciativa) %>% as.data.frame()
+nueva$suma=rowSums(nueva[,c(1,2)])
+nueva$chec=if_else(nueva$suma==1998,999,nueva$suma)
+nueva$chec=if_else(nueva$suma==2,1,nueva$chec)
 
-imprime2=tabla(columna = 72)
-imprime=imprime2+imprime1
-imprime$estatus=c("Si","No")
+imprime=tabla(columna = 5,grupo = nueva,nombre = names(nueva[2]))
+imprime
 
-inter2=tabla(columna = 150)
-inter=inter2+inter1
-inter$estatus=c("Si","No")
+nueva=base2 %>% select(147,150,Asistio_Talleres_Iniciativa) %>% as.data.frame()
+nueva$suma=rowSums(nueva[,c(1,2)])
+nueva$chec=if_else(nueva$suma==1998,999,nueva$suma)
+nueva$chec=if_else(nueva$suma==2,1,nueva$chec)
 
-final2=tabla(columna = 228)
-final=final2+final1
-final$estatus=c("Si","No")
+inter=tabla(columna = 5,grupo = nueva,nombre = names(nueva[2]))
+inter
+
+nueva=base2 %>% select(225,228,Asistio_Talleres_Iniciativa) %>% as.data.frame()
+nueva$suma=rowSums(nueva[,c(1,2)])
+nueva$chec=if_else(nueva$suma==1998,999,nueva$suma)
+nueva$chec=if_else(nueva$suma==2,1,nueva$chec)
+
+final=tabla(columna = 5,grupo = nueva,nombre = names(nueva[2]))
+final
+
 
 tabla19sub=subset(cbind(imprime,inter,final),select = c(1,2,3,5,6,8,9))
 tabla19=rbind(tabla19,tabla19sub)
